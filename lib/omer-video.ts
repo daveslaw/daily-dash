@@ -1,0 +1,60 @@
+type OmerVideoResult = { dayNumber: number; url: string };
+
+// URLs sourced from R' Yakov's Sefirat HaOmer series (omer_clips.csv)
+const OMER_URLS: Record<number, string> = {
+  1: "https://youtu.be/7uOOLhky2jU",
+  2: "https://youtu.be/AlvcxPt6lJ0",
+  3: "https://youtu.be/vDvJEL8qD4I",
+  4: "https://youtu.be/_bGTHoMxyGQ",
+  5: "https://youtu.be/6wzduJ2XbVg",
+  6: "https://youtu.be/9n9vE5i5Us0",
+  7: "https://youtu.be/58RO6acm3kw",
+  8: "https://youtu.be/UHJS6w-6uak",
+  9: "https://youtu.be/VSDwlhCghkI",
+  10: "https://youtu.be/AiGVg9Kk1rY",
+  11: "https://youtu.be/L7EsUlniIuM",
+  12: "https://youtu.be/UAjU0SlsGBk",
+  13: "https://youtu.be/-EuKl7RN-gE",
+  14: "https://youtu.be/rWUL9ip9cOQ",
+  15: "https://youtu.be/R8YpB5mNp9g",
+  16: "https://youtu.be/NH2WPrqv_Mk",
+  17: "https://youtu.be/NrOVPDrCNbQ",
+  18: "https://youtu.be/vn4TmyKyue4",
+  19: "https://youtu.be/cRAmfALYvNI",
+  20: "https://youtu.be/o4wq4OttgZc",
+  21: "https://youtu.be/LXcuH26Bv24",
+  22: "https://youtu.be/gweZz7Ycxms",
+  23: "https://youtu.be/eBk6fbRVNfw",
+  24: "https://youtu.be/tkU2w1k77as",
+  25: "https://youtu.be/00fwAFEzFeo",
+  26: "https://youtu.be/53zPcFWlImc",
+  27: "https://youtu.be/f5mS1oPLASA",
+  28: "https://youtu.be/iuFKslkhqbc",
+  29: "https://youtube.com/live/yeUSyfwNG-s?feature=share",
+  30: "https://youtube.com/live/VTv8MEgkNpw?feature=share",
+  31: "https://youtube.com/live/Yqo5RCqv7u0?feature=share",
+  32: "https://youtube.com/live/P5qOpmmlamo?feature=share",
+  33: "https://youtube.com/live/zFrFgrNneQo?feature=share",
+  34: "https://youtube.com/live/3Qxx3axHAq0?feature=share",
+  35: "https://youtube.com/live/WxbNlMi6MyY?feature=share",
+  36: "https://youtube.com/live/vIEyBPMEhY4?feature=share",
+  37: "https://youtube.com/live/5bsEJmIVgzI?feature=share",
+  38: "https://youtube.com/live/QYytSj_eWzk?feature=share",
+  39: "https://youtube.com/live/rbmcEuS6QF4?feature=share",
+  40: "https://youtube.com/live/YLNmOQR7Ti0?feature=share",
+  41: "https://youtube.com/live/-LPdp7-GRfM?feature=share",
+  42: "https://youtube.com/live/6ftj4Qp-qsc?feature=share",
+  43: "https://youtube.com/live/uKZ9Dlih0ts?feature=share",
+  44: "https://youtube.com/live/Sm5hjd2sbEI?feature=share",
+  45: "https://youtube.com/live/edNLnM5hARs?feature=share",
+  46: "https://youtube.com/live/422WzsiUOhM?feature=share",
+  47: "https://youtube.com/live/VS5B9NpxY-8?feature=share",
+  48: "https://youtube.com/live/5cfUbfinst8?feature=share",
+  49: "https://youtube.com/live/lqHeV01Ilo8?feature=share",
+};
+
+export function resolveOmerVideo(day: number): OmerVideoResult | null {
+  const url = OMER_URLS[day];
+  if (!url) return null;
+  return { dayNumber: day, url };
+}
