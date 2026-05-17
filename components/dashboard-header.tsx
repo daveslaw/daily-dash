@@ -1,5 +1,4 @@
 import { DailyCalendarInfo } from "@/lib/hebrew-calendar";
-import { RefreshCw } from "lucide-react";
 
 interface Props {
   info: DailyCalendarInfo;
@@ -26,7 +25,7 @@ export function DashboardHeader({ info }: Props) {
         )}
       </div>
 
-      <h1 className="text-3xl font-light text-white tracking-wide" dir="rtl">
+      <h1 className="text-3xl font-light text-white tracking-wide font-[family-name:var(--font-space-grotesk)]" dir="rtl">
         {info.hebrewDate}
       </h1>
       <p className="text-white/50 text-sm">{info.gregorianDate}</p>

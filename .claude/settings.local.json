@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.chabad.org)",
+      "WebFetch(domain:www.hebcal.com)",
+      "WebFetch(domain:www.chinuch.org)",
+      "WebFetch(domain:nertzaddik.com)",
+      "WebFetch(domain:jewisheverything.net)",
+      "WebFetch(domain:www.ohelsara.com)"
+    ]
+  }
+}
